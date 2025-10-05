@@ -16,14 +16,12 @@ public class Powerup extends GameObject {
         this.node.setArcWidth(5);
         this.node.setArcHeight(5);
 
-        Color color;
-        switch (type) {
-            case EXTEND: color = Color.GOLD; break;
-            case FREEZE: color = Color.AQUA; break;
-            case LASER: color = Color.RED; break;
-            case MULTI:
-            default: color = Color.PURPLE; break;
-        }
+        Color color = switch (type) {
+            case EXTEND -> Color.GOLD;
+            case FREEZE -> Color.AQUA;
+            case LASER -> Color.RED;
+            default -> Color.PURPLE;
+        };
         this.node.setFill(color);
         this.node.setStroke(Color.WHITE);
         setX(x);

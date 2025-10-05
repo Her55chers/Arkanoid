@@ -5,7 +5,6 @@ import javafx.scene.shape.Rectangle;
 import static arkanoid.arkanoid.gameconfig.GameConfig.*;
 import arkanoid.arkanoid.gameconfig.GameConfig;
 
-import java.lang.reflect.Type;
 
 public class Paddle extends GameObject {
     private final Rectangle node;

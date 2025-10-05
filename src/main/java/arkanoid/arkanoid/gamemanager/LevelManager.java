@@ -19,8 +19,8 @@ public class LevelManager {
     public List<Powerup> getPowerups() { return powerups; }
 
     public void loadLevel(int level, Pane root) {
-        root.getChildren().removeAll(bricks.stream().map(Brick::getNode).collect(Collectors.toList()));
-        root.getChildren().removeAll(powerups.stream().map(Powerup::getNode).collect(Collectors.toList()));
+        root.getChildren().removeAll(bricks.stream().map(Brick::getNode).toList());
+        root.getChildren().removeAll(powerups.stream().map(Powerup::getNode).toList());
         bricks.clear();
         powerups.clear();
 
